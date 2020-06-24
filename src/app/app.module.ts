@@ -1,13 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MenuComponent } from './layout/menu/menu.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { LoginComponent } from './login/login.component';
-import { Auth } from './guards/auth.guard/auth.guard.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {MenuComponent} from './layout/menu/menu.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {HeaderComponent} from './layout/header/header.component';
+import {LoginComponent} from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { Auth } from './guards/auth.guard/auth.guard.component';
     MenuComponent,
     FooterComponent,
     HeaderComponent,
-    LoginComponent,
-    Auth.GuardComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,4 +23,5 @@ import { Auth } from './guards/auth.guard/auth.guard.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
