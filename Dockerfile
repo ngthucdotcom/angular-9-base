@@ -1,14 +1,12 @@
-# Build: docker build -t angular-base:latest --build-arg environment=production .
-# Run: docker run --name=angular-base -p 80:80 angular-base
+# Build: docker build -t angular-template:latest --build-arg environment=production .
+# Run: docker run --name=angular-template -p 80:80 angular-template
 
 # Stage 0, "build-stage", based on Node.js, to build and compile the frontend
-FROM tiangolo/node-frontend:10 as build-stage
+FROM ngthuc/angular-base:9 as build-stage
 
 WORKDIR /app
 
 COPY package*.json /app/
-
-RUN npm install -g @angular/cli
 
 RUN npm install
 
